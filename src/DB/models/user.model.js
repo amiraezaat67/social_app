@@ -33,12 +33,12 @@ const userSchema = new mongoose.Schema({
         public_id:{
             type: String,
             // required: [true, 'Public id is required'],
-            unique: 'idx_public_id_unique'
+            // unique: 'idx_public_id_unique'
         },
         folderId:{
             type: String,
             // required: [true, 'Folder id is required'],
-            unique: 'idx_folder_id_profile_unique'
+            // unique: 'idx_folder_id_profile_unique'
         }
     },
     coversCloud:{
@@ -47,13 +47,13 @@ const userSchema = new mongoose.Schema({
             public_id:{
                 type: String,
                 // required: [true, 'Public id is required'],
-                unique: 'idx_public_id_unique'
+                // unique: 'idx_public_id_unique'
             },
         }],
         folderId:{
             type: String,
             // required: [true, 'Folder id is required'],
-            unique: 'idx_folder_id_cover_unique'
+            // unique: 'idx_folder_id_cover_unique'
         } 
     },
     confirmOtp:String,
