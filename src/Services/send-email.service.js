@@ -12,6 +12,13 @@ export const sendEmailService = async({
     attachments=[]
 }) => {
     try {
+        console.log('Send mail credentials',{
+            auth: {
+                user: process.env.USER_EMAIL,
+                pass: process.env.EMAIL_PASSWORD
+            }
+        });
+        
         const transporter = nodemailer.createTransport({
             host: 'smtp.gmail.com',
             port: 465,
