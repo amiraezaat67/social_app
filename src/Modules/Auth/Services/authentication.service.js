@@ -30,6 +30,13 @@ export const SignUpService = async (req,res) => {
     const otp = Math.floor(100000 + Math.random() * 900000).toString()
     const hashedOtp = hashSync(otp, +process.env.SALT_ROUNDS)
 
+    console.log('Email in auth service', 
+        {
+            subject:"Confirm your email",
+            html:`<h1>${otp}</h1>`,
+            email,
+        }
+    )
     // send email
     EmailEvent.emit('sendEmail' , {
         subject:"Confirm your email",
