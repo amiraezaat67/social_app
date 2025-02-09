@@ -9,7 +9,7 @@ const postController = Router();
 postController.post(
     '/create-post',
     authenticationMiddleware(), 
-    Multer('Posts', ImageExtensions).array('image', 5),
+    // Multer('Posts', ImageExtensions).array('image', 5),
     postService.createPost)
 
 export {postController}
